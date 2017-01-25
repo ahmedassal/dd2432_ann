@@ -82,8 +82,8 @@ class pcn:
 			for j in range(nClasses):
 				cm[i,j] = np.sum(np.where(outputs==i,1,0)*np.where(targets==j,1,0))
 
-		print cm
-		print np.trace(cm)/np.sum(cm)
+		print(cm)
+		print(np.trace(cm)/np.sum(cm))
 		
 def logic():
 	import pcn
@@ -100,3 +100,4 @@ def logic():
 	q.pcntrain(b[:,0:2],b[:,2:],0.25,10)
 	q.confmat(b[:,0:2],b[:,2:])
 
+logic()

@@ -11,6 +11,7 @@
 import numpy as np
 
 iris = np.loadtxt('../3 MLP/iris_proc.data',delimiter=',')
+
 iris[:,:4] = iris[:,:4]-iris[:,:4].mean(axis=0)
 imax = np.concatenate((iris.max(axis=0)*np.ones((1,5)),iris.min(axis=0)*np.ones((1,5))),axis=0).max(axis=0)
 iris[:,:4] = iris[:,:4]/imax[:4]
